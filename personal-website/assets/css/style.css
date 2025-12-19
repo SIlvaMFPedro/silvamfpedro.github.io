@@ -109,6 +109,36 @@ a:hover,a:active,a:focus{
     margin-right: -42%;
 }
 
+/* -------------------------
+   Add small vertical gaps between sections
+   - .row + .row: spacing when two .row elements are consecutive
+   - section + section: spacing between adjacent section elements
+   This is a safe, minimal change to introduce visible space between divs
+   without altering the markup.
+   ------------------------- */
+.row + .row {
+    margin-top: 30px;
+}
+
+section + section {
+    margin-top: 40px;
+}
+
+/* Spacer used in About section to add vertical gap before the services columns */
+.spacer {
+    height: 40px; /* adjust this value to increase/decrease the space */
+    width: 100%;
+}
+
+/* Profile image cropping: set a fixed square and crop edges using object-fit */
+.profile-photo {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; /* crop edges to fill box */
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* /////////////////////////////////////////////////////////////////////
 //  02 - Header
