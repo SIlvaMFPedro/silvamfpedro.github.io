@@ -126,7 +126,7 @@ section + section {
 
 /* Spacer used in About section to add vertical gap before the services columns */
 .spacer {
-    height: 40px; /* adjust this value to increase/decrease the space */
+    height: 150px; /* adjust this value to increase/decrease the space */
     width: 100%;
 }
 
@@ -135,8 +135,18 @@ section + section {
     width: 350px;
     height: 350px;
     object-fit: cover; /* crop edges to fill box */
+    object-position: center; /* ensure crop is centered */
+    border-radius: 50%; /* circular crop */
     display: block;
     margin: 0 auto;
+}
+
+/* Responsive: smaller circular photo on narrow screens */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 
